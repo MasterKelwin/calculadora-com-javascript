@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <h1>CALCULADORA</h1>
+        <div class="calculadora">
+            <div class="principal">
+                <div class="tela">
+                    <p class="tela__input" id="resultado"></p>
+                </div>
+                <div class="botoes">
+                    <button class="btn btn__1" onclick="inserir(1)">1</button>
+                    <button class="btn btn__2" onclick="inserir(2)">2</button>
+                    <button class="btn btn__3" onclick="inserir(3)">3</button>
+                    <button class="btn btn__4" onclick="inserir(4)">4</button>
+                    <button class="btn btn__5" onclick="inserir(5)">5</button>
+                    <button class="btn btn__6" onclick="inserir(6)">6</button>
+                    <button class="btn btn__7" onclick="inserir(7)">7</button>
+                    <button class="btn btn__8" onclick="inserir(8)">8</button>
+                    <button class="btn btn__9" onclick="inserir(9)">9</button>
+                    <button class="btn btn__0" onclick="inserir(0)">0</button>
+                    <button class="btn btn__soma" onclick="inserir('+')">+</button>
+                    <button class="btn btn__subtracao" onclick="inserir('-')">-</button>
+                    <button class="btn btn__multiplicacao" onclick="inserir('*')">*</button>
+                    <button class="btn btn__divisao" onclick="inserir('/')">/</button>
+                    <button class="btn btn__igual" onclick="calcular()">=</button>
+                    <button class="btn btn__c" onclick="limpar()">C</button>
+                    <button class="btn btn__porcentagem" onclick="inserir('%')">%</button>
+                    <button class="btn btn__delete" onclick="apagar()">Delete</button>
+                    <button class="btn btn__ponto" onclick="inserir('.')">.</button>
+                </div>
+            </div>
+            <div class="historico">
+                <p class="resultado">10</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
