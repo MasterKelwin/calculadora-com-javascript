@@ -3,3 +3,13 @@
     --cor-de-fundo: rgb(2, 54, 15);
     --cor-clara: #fff;
 }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}

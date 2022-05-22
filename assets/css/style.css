@@ -70,11 +70,10 @@ h1 {
     font-weight: bolder;
     color: var(--cor-clara);
     border-radius: 10px;
-    font-size: 1rem;
+    font-size: 3rem;
     display: flex;
     flex-flow: column;
-    flex-direction: column-reverse;
-    text-align: right;
+    text-align: center  ;
 }
 
 .btn {
@@ -185,14 +184,3 @@ h1 {
     grid-row: 2 / 3;
 }
 
-
-
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-input[type="number"] {
-    -moz-appearance: textfield;
-}
