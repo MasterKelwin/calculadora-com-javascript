@@ -11,16 +11,11 @@ function limpar() {
 }
 
 function calcular() {
-    var resultadoCalcular = document.getElementById('resultado').innerHTML;
-    if(resultadoCalcular) {
-        const resultadoNaTela = document.getElementById('resultado');
-        resultadoCalculo = eval(resultadoCalcular).toFixed(2);
-        resultadoNaTela.innerHTML = resultadoCalculo;
-        geraHistorico();
-    }
-    else {
-        document.getElementById('resultado').innerHTML = "Erro";
-    }
+    const resultadoNaTela = document.getElementById('resultado');
+    resultadoCalculo = eval(resultadoNaTela.innerHTML).toFixed(2);
+    resultadoNaTela.innerHTML = resultadoCalculo;
+    
+    geraHistorico();
 }
 
 function apagar() {
