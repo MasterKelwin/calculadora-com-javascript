@@ -19,31 +19,48 @@ function calcular() {
 }
 
 function calcularPorcentagem() {
-    let porcentagem = resultadoNaTela.innerHTML;
-    let porcentagem2 = useRegex(porcentagem);
-    let resultadoPorcentagem = (porcentagem / 1000);
-    let exibirResultado = resultadoPorcentagem * porcentagem2;
-    
-    //console.log(porcentagem)
-    console.log(porcentagem2)
-    //console.log(exibirResultado)
-    //operaComPorcentagem(exibirResultado);
-    //gerarHistorico();
+    let campoComPorcentagem = resultadoNaTela.innerHTML;
+    let valor = useRegexValor(campoComPorcentagem);
+    let porcentagem = useRegexPorcentagem(campoComPorcentagem);
+    let resultadoUmPorCento = valor / 100;
+    let valorPorcentagemNumerica = resultadoUmPorCento * porcentagem;
+    operaComPorcentagem(valorPorcentagemNumerica);
 }
 
-function useRegex(porcentagem) {
+function operaComPorcentagem(valorPorcentagemNumerica) {
+    let campoComPorcentagem = resultadoNaTela.innerHTML;
+    let valor = useRegexValor(campoComPorcentagem);
+    let operador = useRegexOperador(campoComPorcentagem);
+    let conta = `${valor} ${operador} ${valorPorcentagemNumerica}`
+    let fazConta = eval(conta);
+    resultadoNaTela.innerHTML = fazConta;
+}
+
+function useRegexPorcentagem(campoComPorcentagem) {
     let regex = /(?:[0-9])+[0-9]+/i;
     let exp = new RegExp(regex, 'g');
     let resultado = null;
-    while (resultado = exp.exec(porcentagem)) {
-        let resultadoRegex = exp.exec(porcentagem); 
+    while (resultado = exp.exec(campoComPorcentagem)) {
+        let resultadoRegex = exp.exec(campoComPorcentagem); 
         return resultadoRegex[0];
     }  
 }
 
-function operaComPorcentagem(exibirResultado) {
-    return 
+function useRegexValor(campoComPorcentagem) {
+    let regex = /[0-9]+/i;
+    let exp = new RegExp(regex, 'g');
+    let resultadoValor = exp.exec(campoComPorcentagem);
+    return resultadoValor[0];
 }
+
+function useRegexOperador(campoComPorcentagem) {
+    let regex = /[+-/*]/i;  //(\-?\+?(\*)?+\/?) 
+    let exp = new RegExp(regex, 'g');
+    let resultadoOperador = exp.exec(campoComPorcentagem);
+    return resultadoOperador[0];
+}
+
+
 
 function apagar() {
     var resultadoApagar = document.getElementById('resultado').innerHTML;
