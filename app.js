@@ -27,16 +27,15 @@ function calcularPorcentagem() {
     let porcentagem = useRegexPorcentagem(campoComPorcentagem);
     let resultadoUmPorCento = valor / 100;
     let valorPorcentagemNumerica = resultadoUmPorCento * porcentagem;
-    operaComPorcentagem(valorPorcentagemNumerica);
+    operaComPorcentagem(valorPorcentagemNumerica, valor);
     gerarHistorico();
 }
 
-function operaComPorcentagem(valorPorcentagemNumerica) {
-    let campoComPorcentagem = resultadoNaTela.innerHTML;
-    let valor = useRegexValor(campoComPorcentagem);
+function operaComPorcentagem(valorPorcentagemNumerica, valor) {
+    let campoComPorcentagem = (resultadoNaTela.innerHTML);
     let operador = useRegexOperador(campoComPorcentagem);
     let conta = `${valor} ${operador} ${valorPorcentagemNumerica}`
-    let fazConta = eval(conta);
+    let fazConta = (eval(conta)).toFixed(0);
     resultadoCalculo = fazConta;
     resultadoNaTela.innerHTML = resultadoCalculo;
 }
