@@ -8,7 +8,7 @@ function inserir(number) {
 }
 
 function limpar() {
-    resultado.innerHTML = "";
+    resultadoNaTela.innerHTML = "";
 }
 
 function calcular() {
@@ -25,6 +25,7 @@ function calcularPorcentagem() {
     let resultadoUmPorCento = valor / 100;
     let valorPorcentagemNumerica = resultadoUmPorCento * porcentagem;
     operaComPorcentagem(valorPorcentagemNumerica);
+    gerarHistorico();
 }
 
 function operaComPorcentagem(valorPorcentagemNumerica) {
@@ -33,7 +34,8 @@ function operaComPorcentagem(valorPorcentagemNumerica) {
     let operador = useRegexOperador(campoComPorcentagem);
     let conta = `${valor} ${operador} ${valorPorcentagemNumerica}`
     let fazConta = eval(conta);
-    resultadoNaTela.innerHTML = fazConta;
+    resultadoCalculo = fazConta;
+    resultadoNaTela.innerHTML = resultadoCalculo;
 }
 
 function useRegexPorcentagem(campoComPorcentagem) {
@@ -60,8 +62,6 @@ function useRegexOperador(campoComPorcentagem) {
     return resultadoOperador[0];
 }
 
-
-
 function apagar() {
     var resultadoApagar = document.getElementById('resultado').innerHTML;
     document.getElementById('resultado').innerHTML = resultadoApagar.substring(0, resultadoApagar.length -1);
@@ -76,8 +76,6 @@ function gerarHistorico() {
 document.addEventListener('keypress', function (e) {
     if (e.which == 13) { //enter
         calcular();
-    } else {
-        return;
-    }
+    } 
 });
 
