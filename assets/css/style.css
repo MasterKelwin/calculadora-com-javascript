@@ -3,10 +3,29 @@ body {
     font-family: 'Montserrat', sans-serif;    
 }
 
+footer {
+    width: 50vw;
+    margin: 0 auto;
+}
+
+.contato {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+a {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--cor-clara);
+    text-decoration: none;
+}
+
+
 main {
     width: 75vw;
     height: 80vh;
-    margin: 10vh auto;
+    margin: 6git vh auto;
 }
 
 .calculadora {
