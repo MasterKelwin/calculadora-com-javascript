@@ -1,4 +1,4 @@
-//'use strict';
+'use strict';
 
 let resultadoCalculo;
 const resultadoNaTela = document.getElementById('resultado');
