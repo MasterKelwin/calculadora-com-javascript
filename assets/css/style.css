@@ -54,12 +54,6 @@ h1 {
     grid-template-columns: 20% 20% 20% 20% 20%; 
     grid-template-rows: 20% 20% 20% 20% 20%;
 }
-.btn {
-    background-color: var(--cor-primaria);
-    color: var(--cor-clara);
-    border-radius: 10px;
-    margin: 0.5%;
-}
 
 .historico {
     width: 25%;
@@ -80,6 +74,10 @@ h1 {
     opacity: .75;
     transition: .6s;
     font-size: 4em;
+    background-color: var(--cor-primaria);
+    color: var(--cor-clara);
+    border-radius: 10px;
+    margin: 0.5%;
 }
 
 .btn:hover {
@@ -149,9 +147,13 @@ h1 {
 }
 
 .btn__porcentagem {
-    grid-column: 4 / 6;
+    grid-column: 4 / 5;
     grid-row: 4 / 5;
+}
 
+.btn__inverter {
+    grid-column: 5 / 6;
+    grid-row: 4 / 5;
 }
 
 .btn__delete {

@@ -21,25 +21,26 @@
                     <p class="tela__input" id="resultado"></p>
                 </div>
                 <div class="botoes">
-                    <button class="btn btn__1" onclick="inserir(1)">1</button>
-                    <button class="btn btn__2" onclick="inserir(2)">2</button>
-                    <button class="btn btn__3" onclick="inserir(3)">3</button>
-                    <button class="btn btn__4" onclick="inserir(4)">4</button>
-                    <button class="btn btn__5" onclick="inserir(5)">5</button>
-                    <button class="btn btn__6" onclick="inserir(6)">6</button>
-                    <button class="btn btn__7" onclick="inserir(7)">7</button>
-                    <button class="btn btn__8" onclick="inserir(8)">8</button>
-                    <button class="btn btn__9" onclick="inserir(9)">9</button>
-                    <button class="btn btn__0" onclick="inserir(0)">0</button>
-                    <button class="btn btn__soma" onclick="inserir('+')">+</button>
-                    <button class="btn btn__subtracao" onclick="inserir('-')">-</button>
-                    <button class="btn btn__multiplicacao" onclick="inserir('*')">*</button>
-                    <button class="btn btn__divisao" onclick="inserir('/')">/</button>
-                    <button class="btn btn__igual" onclick="calcular()">=</button>
-                    <button class="btn btn__c" onclick="limpar()">C</button>
-                    <button class="btn btn__porcentagem" onclick="calcularPorcentagem()">%</button>
-                    <button class="btn btn__delete" onclick="apagar()">Delete</button>
-                    <button class="btn btn__ponto" onclick="inserir('.')">.</button>
+                    <button class="btn btn__1" onclick="inserir(1)" id="tecla1">1</button>
+                    <button class="btn btn__2" onclick="inserir(2)" id="tecla2">2</button>
+                    <button class="btn btn__3" onclick="inserir(3)" id="tecla3">3</button>
+                    <button class="btn btn__4" onclick="inserir(4)" id="tecla4">4</button>
+                    <button class="btn btn__5" onclick="inserir(5)" id="tecla5">5</button>
+                    <button class="btn btn__6" onclick="inserir(6)" id="tecla6">6</button>
+                    <button class="btn btn__7" onclick="inserir(7)" id="tecla7">7</button>
+                    <button class="btn btn__8" onclick="inserir(8)" id="tecla8">8</button>
+                    <button class="btn btn__9" onclick="inserir(9)" id="tecla9">9</button>
+                    <button class="btn btn__0" onclick="inserir(0)" id="tecla0">0</button>
+                    <button class="btn btn__soma" onclick="inserir('+')" id="tecla+">+</button>
+                    <button class="btn btn__subtracao" onclick="inserir('-')" id="tecla-">-</button>
+                    <button class="btn btn__multiplicacao" onclick="inserir('*')" id="tecla*">*</button>
+                    <button class="btn btn__divisao" onclick="inserir('/')" id="tecla/">/</button>
+                    <button class="btn btn__igual" onclick="calcular()" id="tecla=">=</button>
+                    <button class="btn btn__c" onclick="limpar()" id="teclaC">C</button>
+                    <button class="btn btn__porcentagem" onclick="calcularPorcentagem()" id="tecla%">%</button>
+                    <button class="btn btn__inverter" onclick="inverterSinal()" id="teclaInverte">+/-</button>
+                    <button class="btn btn__delete" onclick="apagar()" id="teclaDelete">Delete</button>
+                    <button class="btn btn__ponto" onclick="inserir('.')" id="tecla.">.</button>
                 </div>
             </div>
             <div class="historico">
@@ -52,5 +53,36 @@
     </footer>
 
     <script src="app.js"></script>
+</body>
+</html>
+
+
+<body>
+    <div class="calculator">
+        <div class="display" id="display"></div>
+        <div class="calculator-buttons">
+            <button id="limparDisplay">CE</button>
+            <button id="limparCalculo">C</button>
+            <button id="backspace">«</button>
+            <button id="operadorDividir">/</button>
+            <button id="tecla7">7</button>
+            <button id="tecla8">8</button>
+            <button id="tecla9">9</button>
+            <button id="operadorMultiplicar">*</button>
+            <button id="tecla4">4</button>
+            <button id="tecla5">5</button>
+            <button id="tecla6">6</button>
+            <button id="operadorSubtrair">-</button>
+            <button id="tecla1">1</button>
+            <button id="tecla2">2</button>
+            <button id="tecla3">3</button>
+            <button id="operadorAdicionar">+</button>
+            <button id="inverter">±</button>
+            <button id="tecla0">0</button>
+            <button id="decimal">,</button>
+            <button id="igual">=</button>
+        </div>
+    </div>
+    <script src="calculadora.js"></script>
 </body>
 </html>
