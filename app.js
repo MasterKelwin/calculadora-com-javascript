@@ -75,6 +75,11 @@ function gerarHistorico() {
     historico.appendChild(resultadoHistorico);
 }
 
+function inverterSinal() {
+    let valorNegativo = resultadoNaTela.innerHTML * -1;
+    resultadoNaTela.innerHTML = valorNegativo;
+};
+
 const mapaTeclado = {
     1: 'tecla1',
     2: 'tecla2',
