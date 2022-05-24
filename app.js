@@ -41,7 +41,7 @@ function operaComPorcentagem(valorPorcentagemNumerica, valor) {
 }
 
 function useRegexPorcentagem(campoComPorcentagem) {
-    let regex = /(?:[0-9])+[0-9]+/i;
+    let regex = /[0-9]+/i;
     let exp = new RegExp(regex, 'g');
     let resultado = null;
     while (resultado = exp.exec(campoComPorcentagem)) {
